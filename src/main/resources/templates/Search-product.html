@@ -1,0 +1,32 @@
+<html>
+<headhead>
+	<title>Search</title>
+<head>
+<body>
+	<h2>Search for a Product</h2>
+ <!----Form for Searching Product byID--->
+ <form th:action="@{/Search}" Method="Post">
+ <label>Enter ID:</label>
+ <input type="number" name="id" id="id" required>
+ <button type="submit">Search</button>
+ </form>
+ <!---This code executed when the Product is available--->
+ <div th:if="${Product !=null}">
+ <h3>Product details</h3>
+ <P><strong>id:</strong><span.th:text="${Product.id}"</span></p>
+ <P><strong>name:</strong><span.th:text="${Product.name}"</span></p>
+ <P><strong>brand:</strong><span.th:text="${Product.brand}"</span></p>
+ <P><strong>madeIn:</strong><span.th:text="${Product.madeIn}"</span></p>
+ <P><strong>price:</strong><span.th:text="${Product.price}"</span></p>
+ <P><strong>quantity:</strong><span.th:text="${Product.quantity}"</span></p>
+ <P><strong>discontRate:</strong><span.th:text="${discountRate}"</span></p>
+ <P><strong>taxprice:</strong><span.th:text="${Product.taxprice}"</span></p>
+ <P><strong>discountprice:</strong><span.th:text="${Product.discountprice}"</span></p>
+ <P><strong>finalprice:</strong><span.th:text="${Product.finalprice}"</span></p>
+ <P><strong>offerprice:</strong><span.th:text="${Product.offerprice}"</span></p>
+ <P><strong>stockvalue:</strong><span.th:text="${Product.stockvalue}"</span></p>
+ </div>
+ <!----Display message if product is not found--->
+ <div th:if="${Product==null}">
+<p>No Product found with the given ID</p>
+ </div>

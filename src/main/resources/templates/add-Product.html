@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Form</title>
+</head>
+<body>
+    <h2>Product Information Form</h2>
+    <form th:action="@{/saveproduct}" method="post">
+	 <label>ProductName</label>
+	 <input type="text" name="name" required>
+	 <br><br>
+	 
+	 <label>Brand</label>
+	 <input type="text" name="brand" required>
+	 <br><br>
+	 
+	 <label>MadeIn</label>
+	 <input type="text" name="madeIn" required>
+	 <br><br> 
+	  
+	  <label>Price</label>
+	  <input type="number" name="price" required>
+	  <br><br>
+	  
+	   <label>Quantity</label>
+	   <input type="number" name="quantity" required>
+	   <br><br>
+	   
+	   <label>Tax Price</label>
+	   	<input type="number" name="taxprice" required>
+	   	<br><br>
+		
+		<label>Discount Rate</label>
+		<input type="number" name="discountRate" required>
+		<br><br>
+		
+	 <button type="submit">save product</button>
+	 <button type="reset">Reset</button>
+    </form>
+  </body>
+  </html>
